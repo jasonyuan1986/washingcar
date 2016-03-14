@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "84F67D89-40A3-477A-8764-C8B7F5EB434D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359" : "%E6%B4%97%E8%BD%A6iPhone%E5%AE%A2%E6%88%B7%E7%AB%AF\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WashingCar",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WashingCar\/WashingCar.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/jason.yuan@221.226.29.90",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359"
+    }
+  ]
+}

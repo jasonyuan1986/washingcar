@@ -1,0 +1,115 @@
+//
+//  PrefixHeader.pch
+//  WashingCar
+//
+//  Created by Jason Yuan on 3/9/15.
+//  Copyright (c) 2015 Rongmai. All rights reserved.
+//
+
+#ifndef WashingCar_PrefixHeader_pch
+#define WashingCar_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "SharedInfo.h"
+#import <AFNetworking/AFNetworking.h>
+#import <JSONKit-NoWarning/JSONKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "payRequsestHandler.h"
+#import "WXApi.h"
+#import "WXApiObject.h"
+#import <Masonry/Masonry.h>
+#import <UMengAnalytics-NO-IDFA/MobClick.h>
+#import <NSLogger/NSLogger.h>
+
+
+#define YELLOWCOLOR [UIColor colorWithRed:255.0/255.0 green:241.0/255.0 blue:0.0 alpha:1.0]
+#define GRAYCOLOR   [UIColor colorWithRed:95.0/255.0 green:95.0/255.0 blue:95.0/255.0 alpha:1.0]
+#define HEITISC13   [UIFont fontWithName:@"Heiti SC" size:13.0]
+#define HEITISC16   [UIFont fontWithName:@"Heiti SC" size:16.0]
+
+#define MOBAPPKEY @"5592035267e58ed3290011e2"
+
+#define AMAPAPIKEY @"ff4f7b43f582c1ab734c806ce261240d"
+#define AMAPSEARCHKEY @"ff4f7b43f582c1ab734c806ce261240d"
+
+//#define HOST @"http://221.226.29.90:8080/"
+//#define HOST @"http://192.168.1.14:8080/"
+#define HOST @"http://lailacn.com/"
+
+#define ALIPAY [HOST stringByAppendingString:@"app/code/aplipay"]
+
+// Api-code GET
+#define CARBRAND [HOST stringByAppendingString:@"app/code/carBrand"]
+#define CARCOLOR [HOST stringByAppendingString:@"app/code/cartColor"]
+#define CARTYPE [HOST stringByAppendingString:@"app/code/cartType"]
+#define CARMODEL [HOST stringByAppendingString:@"app/code/carModel"]
+#define WASHTIME [HOST stringByAppendingString:@"app/code/timeTerm"]
+
+// Api-member POST
+#define AUTHCODE [HOST stringByAppendingString:@"app/member/authCode"]
+#define REGISTER [HOST stringByAppendingString:@"app/member/regUser"]
+#define NEWREGISTER [HOST stringByAppendingString:@"app/member/regUserWithShare"]
+#define CHANGENAME [HOST stringByAppendingString:@"app/member/changeName"]
+#define ADDCAR [HOST stringByAppendingString:@"app/member/addCar"]
+#define CARLIST [HOST stringByAppendingString:@"app/member/carList"]
+#define MEMBERINFO [HOST stringByAppendingString:@"app/member/set"]
+#define EXTRALIST [HOST stringByAppendingString:@"app/member/extra"]
+#define CASHPAY [HOST stringByAppendingString:@"app/member/payOrder"]
+#define LEFTORDERS [HOST stringByAppendingString:@"app/member/getCurrentTimesOrder"]
+#define SINGLEORDER [HOST stringByAppendingString:@"app/member/makeSingleOrder"]
+#define BUYSETORDER [HOST stringByAppendingString:@"app/member/makePlanSetOrder"]
+#define BUYTIMEMEMBER [HOST stringByAppendingString:@"app/member/makeTimesSetOrder"]
+#define CANCELORDER [HOST stringByAppendingString:@"app/member/cancelOrder"]
+#define FEEDORDER [HOST stringByAppendingString:@"app/member/commentOrder"]
+#define LOGOUT  [HOST stringByAppendingString:@"app/member/logout"]
+#define GETDATE [HOST stringByAppendingString:@"app/member/getPlanDate"]
+#define MAKEBALANCEORDER [HOST stringByAppendingString:@"app/member/makeBalanceOrder"]
+#define CHECKAREA [HOST stringByAppendingString:@"app/member/checkArea"]
+
+// Api-member GET
+#define WASHPRICE [HOST stringByAppendingString:@"app/member/product/1"]
+#define ORDERLIST [HOST stringByAppendingString:@"app/member/orderList"]
+#define ORDERDETAIL [HOST stringByAppendingString:@"app/member/order/"]
+#define USERINFO [HOST stringByAppendingString:@"app/member/userInfo"]
+#define MUSICURL [HOST stringByAppendingString:@"music.json"]
+#define PICTUREURL [HOST stringByAppendingString:@"picture.json"]
+#define INFOURL [HOST stringByAppendingString:@"info.json"]
+#define CARBOY  [HOST stringByAppendingString:@"app/member/carBoy"]
+#define GETTIMESORDER [HOST stringByAppendingString:@"app/member/getCurrentTimesOrder"]
+#define USEINTRO [HOST stringByAppendingString:@"use-intro.html"]
+#define WASHINTRO [HOST stringByAppendingString:@"wash-intro.html"]
+#define DELETECAR [HOST stringByAppendingString:@"app/member/removeCar/"]
+#define GETTOKEN [HOST stringByAppendingString:@"app/game/token?key="]
+#define GETTOKENRESULT [HOST stringByAppendingString:@"app/game/result?token="]
+#define SHOPPING [HOST stringByAppendingString:@"msite/activity.html?token="]
+#define GETSHARE [HOST stringByAppendingString:@"app/game/shareKeep?key="]
+#define ORDERPAYFINISH [HOST stringByAppendingString:@"msite/order.html"]
+#define SHOPURL [HOST stringByAppendingString:@"msite/index.html"]
+#define ITEMURL [HOST stringByAppendingString:@"msite/item.html?pid="]
+#define APPGAME [HOST stringByAppendingString:@"app/game/finish"]
+#define VERSION [HOST stringByAppendingString:@"info/version.json"]
+#define GETDIYONGQUAN [HOST stringByAppendingString:@"app/active/coupon/"]
+#define DELETEDIYONGQUAN [HOST stringByAppendingString:@"app/active/delcoupon/"]
+#define GETDIYONGQUANLIST [HOST stringByAppendingString:@"app/active/couponlist"]
+#define COUPONCOUNT [HOST stringByAppendingString:@"app/active/couponCount"]
+#define DISCOUNTCODE [HOST stringByAppendingString:@"app/active/code?code="]
+
+/*
+ *商户的唯一的parnter和seller。
+ *签约后，支付宝会为每个商户分配一个唯一的 parnter 和 seller。
+ */
+
+/*============================================================================*/
+/*=======================需要填写商户app申请的===================================*/
+/*============================================================================*/
+#define PARTNER @"2088911136835067"
+#define SELLER @"kuaidian_laila@sina.com"
+#define PRIVATEKEY @"MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAL9jFty5KeWNIlFg1EHUuQoifpnFEP0wigokgT91tVTEWccbFzgetTPGW6fgp4hoA2iko12Zx3pSXlwA7MknYYM6Ziq5slPg516D0WSkUGlRdMcadIzGNUZL4/kFP0IMjgFM0nBGbNe0y5LV9W3hspaXLxAhfGOfENRQ9hOqg++bAgMBAAECgYEAj7+VRGOvHENNK2JXCrsD4KDYBhcGE6WJiOSyTz/R2sE/zVSDtBscbq7l2MncC5BUPxypt3vxX+bOCLyJHOz/R4x1Uu6ITqky3VkB0/kDQQiEcbH/o6cIPeXcnvaK/3nY4L/f5kL7WXXCx7y3nbQsGebSDP194QDpdGoP0qICdEECQQDpTymVcrx8fmDCcaC7Mcx4LBlsWiBDhDMNb09q+jQEtaxCoNfbUe/aP7x9BdX/zEPNzg96DS4m8A7f8FV3fi7HAkEA0gAqhOxaWUsgOfOl0J4qSeHRTXzgDnd3m1ki00JnAAV1/NW9WWoO6mrmCQ5pGQ87WPCQZ3iz6lKroK44wp50jQJBAIU10M1mvF3snnyG+jnHnjJDI6Ts9Jz4H1odYt/2ybqirB9CzNyJtQQM/ib4LQ6nZ1NbwxRx8BcFW8ja5UGbx0MCQQDEk+s5apZYp/6OwQki9CvZ5U0sIA0M/cA054e2Ap6wYmxENUB+hs1XmqGjMJ4pGx0O8IH8mfyxCJooW24+oF2xAkBxdABCF/EgxrMO9cx9RCQ/foJBUz3W/nO2pnxOMDflyFVQemvvyDq0rzXPIdxZ26JhwAnoGoQMedPExmEpWY1Q"
+/*============================================================================*/
+/*============================================================================*/
+/*============================================================================*/
+
+
+#endif

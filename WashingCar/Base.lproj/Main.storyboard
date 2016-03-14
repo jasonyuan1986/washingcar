@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rcW-KF-EYN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EDj-TY-wBb">
+            <objects>
+                <navigationController id="rcW-KF-EYN" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8cZ-aY-cMQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xtA-pp-VUQ" kind="relationship" relationship="rootViewController" id="Zdb-yF-yue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="007-Rb-ODY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="712"/>
+        </scene>
+        <!--来啦洗车-->
+        <scene sceneID="fFT-Rs-iEU">
+            <objects>
+                <viewController id="xtA-pp-VUQ" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z6W-HC-ZrS"/>
+                        <viewControllerLayoutGuide type="bottom" id="cH4-OY-xlx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hR7-D7-asf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-cI-T8n">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem image="index_icon" id="P79-sB-dUF">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" image="order_icon" id="eMe-sl-ddA">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="" image="mine_icon" id="zW7-Ad-pFm">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f6V-cI-T8n" firstAttribute="leading" secondItem="hR7-D7-asf" secondAttribute="leadingMargin" constant="-16" id="NDt-WG-S3V"/>
+                            <constraint firstItem="cH4-OY-xlx" firstAttribute="top" secondItem="f6V-cI-T8n" secondAttribute="bottom" id="deZ-1O-asZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f6V-cI-T8n" secondAttribute="trailing" constant="-16" id="nzK-lm-udb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="来啦洗车" id="u4e-zD-2cA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="customTabBar" destination="f6V-cI-T8n" id="UxZ-0y-5t3"/>
+                        <segue destination="xZP-gH-L7N" kind="show" identifier="showWeather" id="eRh-Bl-Zmv"/>
+                        <segue destination="PQY-Ws-0Mv" kind="show" identifier="showLogin" id="D3r-Sx-Gfo"/>
+                        <segue destination="3ks-VZ-CMp" kind="show" identifier="showWashCar" id="b62-Hv-2Bf"/>
+                        <segue destination="Z21-Ne-fMw" kind="show" identifier="showFlow" id="3jQ-R9-7sv"/>
+                        <segue destination="61f-G1-Cs0" kind="show" identifier="showOrder" id="CMa-qA-I0Z"/>
+                        <segue destination="QUj-cz-Oeu" kind="show" identifier="showMine" id="mFZ-CD-cFW"/>
+                        <segue destination="CbO-li-ODb" kind="show" identifier="showMember" id="H2f-mF-86H"/>
+                        <segue destination="QCV-am-HlL" kind="show" identifier="showShare" id="3pr-2Y-Ucg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uG-8f-oI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.5" y="712.5"/>
+        </scene>
+        <!--我的来啦-->
+        <scene sceneID="bbj-RG-spa">
+            <objects>
+                <viewController title="我的来啦" id="QUj-cz-Oeu" customClass="MineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YqA-oG-K3A"/>
+                        <viewControllerLayoutGuide type="bottom" id="dMw-bh-brb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y0X-ah-w1r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="PQY-Ws-0Mv" kind="show" identifier="showLogin" id="R9Y-Mm-duc"/>
+                        <segue destination="Hwu-cQ-6I5" kind="show" identifier="showPay" id="ch0-MK-0Rk"/>
+                        <segue destination="61f-G1-Cs0" kind="show" identifier="showOrder" id="EsT-7t-Bbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qC0-fF-N6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="949"/>
+        </scene>
+        <!--订单支付-->
+        <scene sceneID="3Ev-Oo-MfB">
+            <objects>
+                <viewController title="订单支付" id="Hwu-cQ-6I5" customClass="Pay3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LjS-cE-gQU"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYP-LM-DPS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cQ5-pj-elB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhI-fn-7NA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="1135"/>
+        </scene>
+        <!--试试手气吧-->
+        <scene sceneID="PA3-cL-bo7">
+            <objects>
+                <viewController title="试试手气吧" id="QCV-am-HlL" customClass="ShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNQ-rd-fjF"/>
+                        <viewControllerLayoutGuide type="bottom" id="3NW-NV-cDo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z0q-Bo-YB1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIT-CJ-pzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="27"/>
+        </scene>
+        <!--流程介绍-->
+        <scene sceneID="Q91-N2-sme">
+            <objects>
+                <viewController title="流程介绍" id="Z21-Ne-fMw" customClass="FlowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="luZ-92-69u"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZB9-iq-ezp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VCs-4C-PF1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZN-gy-FgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907.5" y="66"/>
+        </scene>
+        <!--洗车下单-->
+        <scene sceneID="NXv-Fv-uZl">
+            <objects>
+                <viewController storyboardIdentifier="washCarViewController" title="洗车下单" id="3ks-VZ-CMp" customClass="WashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yNg-Rr-Hh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jmb-0V-5E5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wlf-f9-Hqc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="aa9-zj-Hpf" kind="show" identifier="showMap" id="jJ1-dN-OCF"/>
+                        <segue destination="Tv1-Vb-NUg" kind="show" identifier="showCarInfo" id="hpv-eB-4QJ"/>
+                        <segue destination="ygQ-oi-UGQ" kind="show" identifier="showFindWorker" id="RGm-q3-hZg"/>
+                        <segue destination="AW3-2T-43O" kind="show" identifier="showConfirmOrder" id="K4s-IU-v3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMY-5a-Szs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="152"/>
+        </scene>
+        <!--位置-->
+        <scene sceneID="riK-ch-a1F">
+            <objects>
+                <viewController title="位置" id="aa9-zj-Hpf" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOA-Bz-YvG"/>
+                        <viewControllerLayoutGuide type="bottom" id="mIY-LS-jNU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sxc-1W-wRj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="itm-rd-Mbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-569"/>
+        </scene>
+        <!--洗车下单-->
+        <scene sceneID="pw1-nE-3y8">
+            <objects>
+                <viewController title="洗车下单" id="Tv1-Vb-NUg" customClass="CarInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1yv-A9-4Mo"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4W-KL-Rxl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oDq-2S-jIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="6ER-qG-0tR" kind="show" identifier="showProvince" id="8jK-wD-6CD"/>
+                        <segue destination="lnU-gt-exN" kind="show" identifier="showAlpha" id="8Vl-yW-fom"/>
+                        <segue destination="DG9-UH-Mng" kind="show" identifier="showBrand" id="UBF-1x-z8a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2f-F2-1dQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113.5" y="-265"/>
+        </scene>
+        <!--确认订单-->
+        <scene sceneID="Efe-FJ-1Vh">
+            <objects>
+                <viewController title="确认订单" id="AW3-2T-43O" customClass="ConfirmOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PYZ-Mg-SCw"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAD-4Z-maq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u7q-57-kJr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="5RB-NZ-wxR" kind="show" identifier="showPay" id="5D4-w7-KQG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GX9-4c-lUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113.5" y="-940"/>
+        </scene>
+        <!--订单支付-->
+        <scene sceneID="Yia-GE-mu2">
+            <objects>
+                <viewController title="订单支付" id="5RB-NZ-wxR" customClass="PayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RWK-ht-NOL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TE3-Uq-RKz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L2V-1N-6YX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="61f-G1-Cs0" kind="show" identifier="showOrder" id="6zm-gV-ITc"/>
+                        <segue destination="YjN-S7-ZMu" kind="show" identifier="showShare" id="2FF-R5-bGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2Y-ig-i0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="-1437"/>
+        </scene>
+        <!--支付成功-->
+        <scene sceneID="qL5-e9-UUW">
+            <objects>
+                <viewController title="支付成功" id="YjN-S7-ZMu" customClass="ShareYouhuiquanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSl-DU-Wkf"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVZ-Jk-tFb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eMi-zc-wM4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="61f-G1-Cs0" kind="show" identifier="showOrder" id="aDa-4c-yn4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvI-p5-mgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3451" y="-1431"/>
+        </scene>
+        <!--我的汽车-->
+        <scene sceneID="qBi-ET-JuU">
+            <objects>
+                <viewController title="我的汽车" id="6ER-qG-0tR" customClass="ProvinceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G4I-mx-Hzt"/>
+                        <viewControllerLayoutGuide type="bottom" id="X5V-uO-Fvr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ump-PD-DZL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4NZ-CP-0yH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="-800"/>
+        </scene>
+        <!--我的汽车-->
+        <scene sceneID="f9b-D1-pKY">
+            <objects>
+                <viewController title="我的汽车" id="lnU-gt-exN" customClass="AlphaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fGj-p5-yMD"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXh-4H-ZzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dQx-uq-8Lv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2A-dZ-F1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="-141"/>
+        </scene>
+        <!--洗车下单-->
+        <scene sceneID="f4z-hP-q7t">
+            <objects>
+                <viewController title="洗车下单" id="ygQ-oi-UGQ" customClass="FindWorkerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xE3-dP-mam"/>
+                        <viewControllerLayoutGuide type="bottom" id="EBr-ll-yg4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICw-Ji-FwA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2v-Zf-H3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="484"/>
+        </scene>
+        <!--我的汽车-->
+        <scene sceneID="DNc-6g-Mf7">
+            <objects>
+                <viewController title="我的汽车" id="DG9-UH-Mng" customClass="CarBrandViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nZm-36-efY"/>
+                        <viewControllerLayoutGuide type="bottom" id="3qq-Gs-Jwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iVl-wF-Qap">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDh-4v-1M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2499" y="484"/>
+        </scene>
+        <!--订单信息-->
+        <scene sceneID="Rn1-3X-u8N">
+            <objects>
+                <viewController title="订单信息" id="61f-G1-Cs0" customClass="OrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZrJ-f2-kdi"/>
+                        <viewControllerLayoutGuide type="bottom" id="lGe-jH-ARn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1C2-mM-f2Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-Yj-LIh">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem image="index_icon" id="0K6-8R-HGn">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" image="order_icon" id="ZrC-mg-j1W">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="" image="mine_icon" id="Jeh-dl-dIC">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lGe-jH-ARn" firstAttribute="top" secondItem="LPu-Yj-LIh" secondAttribute="bottom" id="19e-jr-bww"/>
+                            <constraint firstAttribute="centerX" secondItem="LPu-Yj-LIh" secondAttribute="centerX" id="4In-IT-eSG"/>
+                            <constraint firstAttribute="width" secondItem="LPu-Yj-LIh" secondAttribute="width" id="lTe-lD-x1V"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="customTabbar" destination="LPu-Yj-LIh" id="K6B-su-Q0A"/>
+                        <segue destination="vxL-eU-NkA" kind="show" identifier="showAppoint" id="fSP-g4-CWf"/>
+                        <segue destination="QUj-cz-Oeu" kind="show" identifier="showMine" id="ysv-GZ-eUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPX-B1-DVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922.5" y="1595"/>
+        </scene>
+        <!--订单信息-->
+        <scene sceneID="wOJ-g4-QeC">
+            <objects>
+                <viewController title="订单信息" id="vxL-eU-NkA" customClass="OrderAppointViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CEn-8P-qrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="bJ9-q7-PlU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ek-av-2qR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zlf-VB-SjT">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem image="index_icon" id="jMy-pQ-192">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" image="order_icon" id="ski-ye-7ko">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="" image="mine_icon" id="uul-RT-9Jg">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bJ9-q7-PlU" firstAttribute="top" secondItem="Zlf-VB-SjT" secondAttribute="bottom" id="9DL-oC-fE0"/>
+                            <constraint firstAttribute="width" secondItem="Zlf-VB-SjT" secondAttribute="width" id="RVe-7a-ZJU"/>
+                            <constraint firstAttribute="centerX" secondItem="Zlf-VB-SjT" secondAttribute="centerX" id="WOI-g8-088"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="customTabbar" destination="Zlf-VB-SjT" id="4SK-36-wbQ"/>
+                        <segue destination="9Sp-lW-59C" kind="show" identifier="showBusinessMan" id="IEu-PQ-Iuf"/>
+                        <segue destination="QUj-cz-Oeu" kind="show" identifier="showMine" id="dNo-0p-FIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPP-hx-s4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922.5" y="2363"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="CYQ-dk-VnI">
+            <objects>
+                <viewController title="详情" id="9Sp-lW-59C" customClass="BusinessManViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WsW-Df-Fsk"/>
+                        <viewControllerLayoutGuide type="bottom" id="iHT-fl-R9V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H3n-wm-FwN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNy-VM-Kem">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem image="index_icon" id="8oH-Zi-d5H">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="1" image="order_icon" id="taD-d9-4za">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                    <tabBarItem tag="2" title="" image="mine_icon" id="m87-F8-Y7S">
+                                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iHT-fl-R9V" firstAttribute="top" secondItem="JNy-VM-Kem" secondAttribute="bottom" id="iF7-Kt-a2a"/>
+                            <constraint firstAttribute="centerX" secondItem="JNy-VM-Kem" secondAttribute="centerX" id="nhy-gH-OlC"/>
+                            <constraint firstItem="JNy-VM-Kem" firstAttribute="width" secondItem="H3n-wm-FwN" secondAttribute="width" id="znk-dD-Kzg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="customTabbar" destination="JNy-VM-Kem" id="G82-9M-p9U"/>
+                        <segue destination="QUj-cz-Oeu" kind="show" identifier="showMine" id="l36-EW-DCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kC-7a-U9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="3076"/>
+        </scene>
+        <!--登录-->
+        <scene sceneID="HgY-lj-vwT">
+            <objects>
+                <viewController title="登录" id="PQY-Ws-0Mv" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dK7-O4-2cg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpf-sw-ge1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gl1-cv-bMf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-g0-j4J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FVP-g0-j4J" secondAttribute="centerX" id="Dcg-fr-tDJ"/>
+                            <constraint firstItem="FVP-g0-j4J" firstAttribute="height" secondItem="gl1-cv-bMf" secondAttribute="height" id="JU1-rB-Ye1"/>
+                            <constraint firstAttribute="centerY" secondItem="FVP-g0-j4J" secondAttribute="centerY" id="KIZ-5g-cts"/>
+                            <constraint firstItem="FVP-g0-j4J" firstAttribute="width" secondItem="gl1-cv-bMf" secondAttribute="width" id="gh3-aF-4rk"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="3ks-VZ-CMp" kind="show" identifier="showWashCar" id="YVY-Fe-6ES"/>
+                        <segue destination="QUj-cz-Oeu" kind="show" identifier="showMine" id="ZkZ-Kr-0xG"/>
+                        <segue destination="CbO-li-ODb" kind="show" identifier="showMember" id="kNN-OI-ySZ"/>
+                        <segue destination="QCV-am-HlL" kind="show" identifier="showShare" id="EBU-HA-k7K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SW7-bT-TuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="1515"/>
+        </scene>
+        <!--洗车指数-->
+        <scene sceneID="k4v-6X-hgN">
+            <objects>
+                <viewController title="洗车指数" id="xZP-gH-L7N" customClass="WeatherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jzr-v1-5Jk"/>
+                        <viewControllerLayoutGuide type="bottom" id="8lm-xV-TR6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="StS-oD-2N1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-0I-RUU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6n-Wj-q7k">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周一" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-An-ssc">
+                                        <rect key="frame" x="41" y="95" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="事宜" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-7s-dHK">
+                                        <rect key="frame" x="203" y="95" width="71" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6~17℃" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32l-OY-bXs">
+                                        <rect key="frame" x="41" y="135" width="280" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="晴  东北风微风" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-PE-9Vr">
+                                        <rect key="frame" x="41" y="156" width="163" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="教事宜洗车，未来一天无雨。风力较小，擦洗一新的汽车至少能保持一天。" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykK-6x-CB7">
+                                        <rect key="frame" x="41" y="185" width="199" height="39"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周二" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0L-Fn-V7v">
+                                        <rect key="frame" x="41" y="315" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11~4℃" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLk-bY-HJT">
+                                        <rect key="frame" x="203" y="315" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NND-mn-4hz">
+                                        <rect key="frame" x="41" y="365" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多云" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J5-rt-y64">
+                                        <rect key="frame" x="119" y="365" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11~9℃" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FJ-Pu-Lu5">
+                                        <rect key="frame" x="203" y="365" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周四" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-ZZ-93r">
+                                        <rect key="frame" x="41" y="413" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多云" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-cK-CMP">
+                                        <rect key="frame" x="119" y="413" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7~11℃" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J77-Xc-rWH">
+                                        <rect key="frame" x="203" y="413" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="周四" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8f-fl-T3R">
+                                        <rect key="frame" x="41" y="460" width="34" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多云" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60y-Lx-jy6">
+                                        <rect key="frame" x="119" y="460" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7~11℃" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGd-ju-QyP">
+                                        <rect key="frame" x="203" y="460" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="wlF-ld-O2q">
+                                        <rect key="frame" x="0.0" y="124" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="7me-ub-j6P">
+                                        <rect key="frame" x="0.0" y="175" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="CIr-Gy-xPT">
+                                        <rect key="frame" x="0.0" y="223" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="HFZ-bq-SjS">
+                                        <rect key="frame" x="0.0" y="492" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="iYF-PM-wQt">
+                                        <rect key="frame" x="0.0" y="444" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="ZU6-Cj-a1t">
+                                        <rect key="frame" x="0.0" y="396" width="320" height="6"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weather_separator" translatesAutoresizingMaskIntoConstraints="NO" id="9h3-JE-iDf">
+                                        <rect key="frame" x="0.0" y="348" width="320" height="6"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多云" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7G-0l-Pso">
+                                        <rect key="frame" x="119" y="315" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="569" id="Ccv-u0-nq3"/>
+                                    <constraint firstAttribute="width" constant="320" id="FLs-Ks-Ud6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" secondItem="Ck0-0I-RUU" secondAttribute="height" id="5aW-MQ-ghC"/>
+                            <constraint firstItem="P6n-Wj-q7k" firstAttribute="top" secondItem="Jzr-v1-5Jk" secondAttribute="bottom" constant="-64" id="6bm-qL-ZvP"/>
+                            <constraint firstAttribute="width" secondItem="Ck0-0I-RUU" secondAttribute="width" id="JsM-ng-uUh"/>
+                            <constraint firstAttribute="centerX" secondItem="Ck0-0I-RUU" secondAttribute="centerX" id="tff-Y6-det"/>
+                            <constraint firstAttribute="centerX" secondItem="P6n-Wj-q7k" secondAttribute="centerX" id="vMT-Ve-wvr"/>
+                            <constraint firstAttribute="centerY" secondItem="Ck0-0I-RUU" secondAttribute="centerY" id="y0v-9o-ldU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="currentDayLabel" destination="bAa-An-ssc" id="mS8-1T-gAq"/>
+                        <outlet property="currentDescriptionLabel" destination="ykK-6x-CB7" id="sUs-JR-lxq"/>
+                        <outlet property="currentStatusLabel" destination="AmP-7s-dHK" id="P1S-OO-bZU"/>
+                        <outlet property="currentTemperatureLabel" destination="32l-OY-bXs" id="seY-ga-cSA"/>
+                        <outlet property="currentWeatherLabel" destination="5d7-PE-9Vr" id="q1A-ge-js3"/>
+                        <outlet property="nextDayLabel" destination="a0L-Fn-V7v" id="qEE-c6-yy7"/>
+                        <outlet property="nextFourDay" destination="E8f-fl-T3R" id="IQk-Im-3FR"/>
+                        <outlet property="nextFourTemperature" destination="TGd-ju-QyP" id="JZB-MP-qiE"/>
+                        <outlet property="nextFourWeather" destination="60y-Lx-jy6" id="2xL-nA-jHS"/>
+                        <outlet property="nextTemperatureLabel" destination="PLk-bY-HJT" id="2vV-Re-1qI"/>
+                        <outlet property="nextThreeDay" destination="Jm4-ZZ-93r" id="ne6-ns-Dgm"/>
+                        <outlet property="nextThreeTemperature" destination="J77-Xc-rWH" id="gTP-L7-ITK"/>
+                        <outlet property="nextThreeWeather" destination="1OJ-cK-CMP" id="5sn-CB-gll"/>
+                        <outlet property="nextTwoDayLabel" destination="NND-mn-4hz" id="bMh-Ic-jd9"/>
+                        <outlet property="nextTwoTemperature" destination="0FJ-Pu-Lu5" id="eJp-9b-Q0B"/>
+                        <outlet property="nextTwoWeatherLabel" destination="0J5-rt-y64" id="bec-sv-q09"/>
+                        <outlet property="nextWeatherLabel" destination="s7G-0l-Pso" id="xZp-ju-qve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lx4-e1-T7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="1797"/>
+        </scene>
+        <!--车辆信息-->
+        <scene sceneID="ERb-9c-Csh">
+            <objects>
+                <viewController title="车辆信息" id="aho-9z-UXh" customClass="MyCarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QQk-aQ-bPi"/>
+                        <viewControllerLayoutGuide type="bottom" id="iLq-A2-Let"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Idy-Te-a8m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Tv1-Vb-NUg" kind="show" identifier="showCarInfo" id="0od-UG-tud"/>
+                        <segue destination="WSo-Hd-U0F" kind="show" identifier="showMap" id="ii9-MM-NpQ"/>
+                        <segue destination="Lpf-PD-x9R" kind="show" identifier="showMonthMember" id="ti1-No-3UD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyP-Lz-fBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="2329"/>
+        </scene>
+        <!--位置-->
+        <scene sceneID="JIN-xc-PF5">
+            <objects>
+                <viewController title="位置" id="WSo-Hd-U0F" customClass="Map2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X9M-Iv-sn7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORO-JC-hDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gak-UD-YJs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNS-Gn-maQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733" y="3115"/>
+        </scene>
+        <!--车型选择-->
+        <scene sceneID="Xpz-Dx-x8v">
+            <objects>
+                <viewController title="车型选择" id="UXr-BU-XRf" customClass="CarTypeSelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E49-XF-ItH"/>
+                        <viewControllerLayoutGuide type="bottom" id="o9u-mX-820"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SW9-dN-Ddq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="fQo-g2-4wA" kind="show" identifier="showCika" id="toc-JG-t4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2y-6A-2jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3037" y="821"/>
+        </scene>
+        <!--优惠套餐-->
+        <scene sceneID="MF2-b2-cU1">
+            <objects>
+                <viewController title="优惠套餐" id="CbO-li-ODb" customClass="MemberViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d2J-Pd-BNX"/>
+                        <viewControllerLayoutGuide type="bottom" id="VP0-eC-gIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCW-UB-3cd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="aho-9z-UXh" kind="show" identifier="showMyCar" id="IAs-bN-sGo"/>
+                        <segue destination="UXr-BU-XRf" kind="show" identifier="showCarType" id="da9-0q-sxb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2SV-yd-K7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2851" y="1495"/>
+        </scene>
+        <!--优惠次卡-->
+        <scene sceneID="1z7-j2-rVw">
+            <objects>
+                <viewController title="优惠次卡" id="fQo-g2-4wA" customClass="YouHuiCiKaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vM2-As-W1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="R44-WP-CWN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ekT-p6-5D2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="p5v-We-9pf" kind="show" identifier="showPay" id="7l9-UU-U0l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5N-HV-3E1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435" y="1393"/>
+        </scene>
+        <!--包月套餐-->
+        <scene sceneID="uiN-RD-6m9">
+            <objects>
+                <viewController title="包月套餐" id="Lpf-PD-x9R" customClass="WeekSelectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c74-rY-7cx"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfJ-12-q26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyY-U5-sQd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="rDx-3u-q7o" kind="show" identifier="showWeekConfirm" id="QQa-Xq-sYx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pg0-yj-08W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3435" y="2405"/>
+        </scene>
+        <!--包月套餐-->
+        <scene sceneID="Hk3-az-zmg">
+            <objects>
+                <viewController title="包月套餐" id="rDx-3u-q7o" customClass="WeekConfirmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1eQ-mX-mzj"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6E-Ug-eG4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gV2-JC-03W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="p5v-We-9pf" kind="show" identifier="showPay" id="a8h-12-P3M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEe-2S-fvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3979" y="2405"/>
+        </scene>
+        <!--订单支付-->
+        <scene sceneID="Aec-SL-c9x">
+            <objects>
+                <viewController title="订单支付" id="p5v-We-9pf" customClass="Pay2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOO-e8-QhN"/>
+                        <viewControllerLayoutGuide type="bottom" id="KaZ-5r-axR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cre-S6-5KP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="61f-G1-Cs0" kind="show" identifier="showOrder" id="qfz-vg-Yna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1r-8n-Ukp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4096" y="1697"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage" width="320" height="568"/>
+        <image name="index_icon" width="29" height="29"/>
+        <image name="mine_icon" width="29" height="30"/>
+        <image name="order_icon" width="30" height="30"/>
+        <image name="weather_separator" width="320" height="5"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hpv-eB-4QJ"/>
+        <segue reference="b62-Hv-2Bf"/>
+        <segue reference="CMa-qA-I0Z"/>
+        <segue reference="D3r-Sx-Gfo"/>
+        <segue reference="H2f-mF-86H"/>
+        <segue reference="3pr-2Y-Ucg"/>
+        <segue reference="mFZ-CD-cFW"/>
+        <segue reference="7l9-UU-U0l"/>
+    </inferredMetricsTieBreakers>
+</document>

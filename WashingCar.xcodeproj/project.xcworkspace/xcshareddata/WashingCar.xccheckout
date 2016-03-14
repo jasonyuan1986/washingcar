@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>33304587-3761-43D2-BB44-E1E20D047C78</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WashingCar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359</key>
+		<string>svn://jason.yuan@221.226.29.90/project/xiche/dev/%252525252525252525E6%252525252525252525B4%25252525252525252597%252525252525252525E8%252525252525252525BD%252525252525252525A6iPhone%252525252525252525E5%252525252525252525AE%252525252525252525A2%252525252525252525E6%25252525252525252588%252525252525252525B7%252525252525252525E7%252525252525252525AB%252525252525252525AF</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WashingCar/WashingCar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359</key>
+		<string>svn://jason.yuan@221.226.29.90</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://jason.yuan@221.226.29.90/project/xiche/dev/%252525252525252525E6%252525252525252525B4%25252525252525252597%252525252525252525E8%252525252525252525BD%252525252525252525A6iPhone%252525252525252525E5%252525252525252525AE%252525252525252525A2%252525252525252525E6%25252525252525252588%252525252525252525B7%252525252525252525E7%252525252525252525AB%252525252525252525AF/WashingCar/WashingCar.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7e69bbe5-92ba-4acf-a253-625ef1f4661a++7359</string>
+			<key>IDESourceControlWCCName</key>
+			<string>%E6%B4%97%E8%BD%A6iPhone%E5%AE%A2%E6%88%B7%E7%AB%AF</string>
+		</dict>
+	</array>
+</dict>
+</plist>
